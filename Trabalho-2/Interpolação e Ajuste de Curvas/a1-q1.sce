@@ -1,6 +1,8 @@
 clear()
 clc()
 
+// GERAR EQUAÇÕES: https://editor.codecogs.com/
+
 printf("\n********** INTERPOLAÇÃO POR SISTEMA DE EQUAÇÕES - VERSÃO MODULARIZADA **********\n\n")
 
 // [0] Carregamento das Funções Modularizadas

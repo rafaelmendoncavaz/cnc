@@ -5,6 +5,8 @@
 clear()
 clc()
 
+// GERAR EQUAÇÕES: https://editor.codecogs.com/
+
 caminho = get_absolute_file_path("a2-q3.sce")
 exec(caminho + "ajuste-poly-min-quadrados.sce", -1)
 exec(caminho + "plot_ajuste-poly-reg.sce", -1)
