@@ -1,0 +1,74 @@
+
+** Isolamento de raízes pelo TVI **
+
+Intervalos que podem conter raízes:
+[185.000000, 186.000000]
+
+
+*** Método da bissecção ***
+
+  k  |  xm  |  abs(bk - ak)  |  f(xm)  
+  1 | 185.500000 |   1.000000 |  -0.002264 
+  2 | 185.250000 |   0.500000 |   0.002591 
+  3 | 185.375000 |   0.250000 |   0.000162 
+  4 | 185.437500 |   0.125000 |  -0.001052 
+  5 | 185.406250 |   0.062500 |  -0.000445 
+  6 | 185.390625 |   0.031250 |  -0.000142 
+  7 | 185.382812 |   0.015625 |   0.000010 
+  8 | 185.386719 |   0.007812 |  -0.000066 
+  9 | 185.384766 |   0.003906 |  -0.000028 
+ 10 | 185.383789 |   0.001953 |  -0.000009 
+ 11 | 185.383301 |   0.000977 |   0.000000 
+
+Raiz aproximada pelo método da bissecção: 185.383301
+Numero de iteracoes: 11
+
+
+
+*** Método da falsa posição ***
+
+  k  |  xm  |  abs(bk - ak)  |  f(xm)  
+  1 | 185.384593 |   1.000000 |  -0.000025 
+  2 | 185.383321 |   0.384593 |  -0.000000 
+
+Raiz aproximada pelo método da falsa posição: 185.383321
+Numero de iteracoes: 2
+
+
+
+*** Método de Newton-Raphson ***
+
+  k  |  x_anterior  |  abs(x1 - x0)  |  f(x_anterior)  
+  1 | 185.383245 |   0.000073 |   0.000001 
+  2 | 185.383318 |   0.000000 |   0.000000 
+
+Raiz aproximada pelo método de Newton-Raphson: 185.383318
+Numero de iteracoes: 2
+
+
+
+*** Método de Secante ***
+
+  k  |  Xk  |  abs(Xk - Xk-1)  |  f(Xk)  
+  1 | 185.384593 |   0.615407 |  -0.011936 
+
+Raiz aproximada pelo método de Secante: 185.383314
+Numero de iteracoes: 1
+
+
+
+******** Teste do Sinal para verificar se tem raiz no intervalo ********
+
+ f(185) * f(186) = -0.000089 
+ Como f(185) * f(186) <  0, existe pelo menos uma raiz no intervalo [185, 186]
+
+******** Teste da Derivada primeira ********
+
+ f¹(185) = -0.019500 e f¹(186) = -0.019291 
+ -0.019500 * -0.019291 = 0.000376 
+ Como f¹(185) * f¹(186) > 0 então existe apenas uma raiz no intervalo [185, 186]
+
+******** Teste para verificar se realmente tem raiz no ponto encontrado ********
+
+ f(185.383301) = 0.000000 
+ Como f(185.383301) é aproximadamente zero, então 185.383301 é uma raiz da função

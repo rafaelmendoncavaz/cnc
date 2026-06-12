@@ -1,0 +1,82 @@
+** Isolamento de raízes pelo TVI **
+
+Intervalos que podem conter raízes:
+[5.000000, 6.000000]
+
+
+*** Método da bissecção ***
+
+  k  |  xm  |  abs(bk - ak)  |  f(xm)  
+  1 |   5.500000 |   1.000000 |   0.078684 
+  2 |   5.250000 |   0.500000 |  -0.025976 
+  3 |   5.375000 |   0.250000 |   0.026698 
+  4 |   5.312500 |   0.125000 |   0.000448 
+  5 |   5.281250 |   0.062500 |  -0.012743 
+  6 |   5.296875 |   0.031250 |  -0.006142 
+  7 |   5.304688 |   0.015625 |  -0.002846 
+  8 |   5.308594 |   0.007812 |  -0.001199 
+  9 |   5.310547 |   0.003906 |  -0.000375 
+ 10 |   5.311523 |   0.001953 |   0.000036 
+ 11 |   5.311035 |   0.000977 |  -0.000170 
+ 12 |   5.311279 |   0.000488 |  -0.000067 
+ 13 |   5.311401 |   0.000244 |  -0.000015 
+ 14 |   5.311462 |   0.000122 |   0.000011 
+ 15 |   5.311432 |   0.000061 |  -0.000002 
+ 16 |   5.311447 |   0.000031 |   0.000004 
+ 17 |   5.311440 |   0.000015 |   0.000001 
+
+Raiz aproximada pelo método da bissecção:   5.311440
+Numero de iteracoes: 17
+
+
+
+*** Método da falsa posição ***
+
+  k  |  xm  |  abs(bk - ak)  |  f(xm)  
+  1 |   5.322807 |   1.000000 |   0.004789 
+  2 |   5.311623 |   0.322807 |   0.000078 
+  3 |   5.311440 |   0.311623 |   0.000001 
+  4 |   5.311437 |   0.311440 |   0.000000 
+
+Raiz aproximada pelo método da falsa posição:   5.311437
+Numero de iteracoes: 4
+
+
+
+*** Método de Newton-Raphson ***
+
+  k  |  x_anterior  |  abs(x1 - x0)  |  f(x_anterior)  
+  1 |   5.309552 |   0.001885 |  -0.000795 
+  2 |   5.311437 |   0.000000 |  -0.000000 
+
+Raiz aproximada pelo método de Newton-Raphson:   5.311437
+Numero de iteracoes: 2
+
+
+
+*** Método de Secante ***
+
+  k  |  Xk  |  abs(Xk - Xk-1)  |  f(Xk)  
+  1 |   5.322807 |   0.677193 |   0.279913 
+  2 |   5.311020 |   0.011787 |   0.004789 
+
+Raiz aproximada pelo método de Secante:   5.311438
+Numero de iteracoes: 2
+
+
+
+******** Teste do Sinal para verificar se tem raiz no intervalo ********
+
+ f(5) * f(6) = -0.037349 
+ Como f(5) * f(6) <  0, existe pelo menos uma raiz no intervalo [5, 6]
+
+******** Teste da Derivada primeira ********
+
+ f¹(5) = 0.435500 e f¹(6) = 0.391950 
+ 0.435500 * 0.391950 = 0.170694 
+ Como f¹(5) * f¹(6) > 0 então existe apenas uma raiz no intervalo [5, 6]
+
+******** Teste para verificar se realmente tem raiz no ponto encontrado ********
+
+ f(5.311440) = 0.000001 
+ Como f(5.311440) é aproximadamente zero, então 5.311440 é uma raiz da função

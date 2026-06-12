@@ -1,0 +1,84 @@
+** Isolamento de raízes pelo TVI **
+
+Intervalos que podem conter raízes:
+[0.200000, 0.300000]
+
+
+*** Método da bissecção ***
+
+  k  |  xm  |  abs(bk - ak)  |  f(xm)  
+  1 |   0.250000 |   0.100000 |   0.176204 
+  2 |   0.225000 |   0.050000 |  -0.226031 
+  3 |   0.237500 |   0.025000 |  -0.027433 
+  4 |   0.243750 |   0.012500 |   0.073738 
+  5 |   0.240625 |   0.006250 |   0.022993 
+  6 |   0.239062 |   0.003125 |  -0.002260 
+  7 |   0.239844 |   0.001562 |   0.010357 
+  8 |   0.239453 |   0.000781 |   0.004046 
+  9 |   0.239258 |   0.000391 |   0.000892 
+ 10 |   0.239160 |   0.000195 |  -0.000684 
+ 11 |   0.239209 |   0.000098 |   0.000104 
+ 12 |   0.239185 |   0.000049 |  -0.000290 
+ 13 |   0.239197 |   0.000024 |  -0.000093 
+ 14 |   0.239203 |   0.000012 |   0.000006 
+ 15 |   0.239200 |   0.000006 |  -0.000044 
+ 16 |   0.239201 |   0.000003 |  -0.000019 
+ 17 |   0.239202 |   0.000002 |  -0.000007 
+
+Raiz aproximada pelo método da bissecção:   0.239202
+Numero de iteracoes: 17
+
+
+
+*** Método da falsa posição ***
+
+  k  |  xm  |  abs(bk - ak)  |  f(xm)  
+  1 |   0.236814 |   0.100000 |  -0.038463 
+  2 |   0.239055 |   0.063186 |  -0.002384 
+  3 |   0.239193 |   0.060945 |  -0.000148 
+  4 |   0.239202 |   0.060807 |  -0.000009 
+  5 |   0.239202 |   0.060798 |  -0.000001 
+
+Raiz aproximada pelo método da falsa posição:   0.239202
+Numero de iteracoes: 5
+
+
+
+*** Método de Newton-Raphson ***
+
+  k  |  x_anterior  |  abs(x1 - x0)  |  f(x_anterior)  
+  1 |   0.239321 |   0.000118 |   0.001912 
+  2 |   0.239203 |   0.000000 |   0.000000 
+
+Raiz aproximada pelo método de Newton-Raphson:   0.239203
+Numero de iteracoes: 2
+
+
+
+*** Método de Secante ***
+
+  k  |  Xk  |  abs(Xk - Xk-1)  |  f(Xk)  
+  1 |   0.236814 |   0.063186 |   1.046026 
+  2 |   0.239055 |   0.002241 |  -0.038463 
+  3 |   0.239203 |   0.000148 |  -0.002384 
+
+Raiz aproximada pelo método de Secante:   0.239203
+Numero de iteracoes: 3
+
+
+
+******** Teste do Sinal para verificar se tem raiz no intervalo ********
+
+ f(0.20) * f(0.30) = -0.637489 
+ Como f(0.20) * f(0.30) <  0, existe pelo menos uma raiz no intervalo [0.20, 0.30]
+
+******** Teste da Derivada primeira ********
+
+ f¹(0.20) = 15.000000 e f¹(0.30) = 18.333333 
+ 15.000000 * 18.333333 = 275.000000 
+ Como f¹(0.20) * f¹(0.30) > 0 então existe apenas uma raiz no intervalo [0, 0]
+
+******** Teste para verificar se realmente tem raiz no ponto encontrado ********
+
+ f(0.239202) = -0.000007 
+ Como f(0.239202) é aproximadamente zero, então 0.239202 é uma raiz da função

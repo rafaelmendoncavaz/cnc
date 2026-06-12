@@ -1,0 +1,90 @@
+** Isolamento de raízes pelo TVI **
+
+Intervalos que podem conter raízes:
+[-1.000000, 0.000000]
+
+
+*** Método da bissecção ***
+
+  k  |  xm  |  abs(bk - ak)  |  f(xm)  
+  1 |   0.300000 |   1.000000 | -72.141000 
+  2 |   0.050000 |   0.500000 | -20.023813 
+  3 |  -0.075000 |   0.250000 |   7.625309 
+  4 |  -0.012500 |   0.125000 |  -6.236123 
+  5 |  -0.043750 |   0.062500 |   0.685312 
+  6 |  -0.028125 |   0.031250 |  -2.777512 
+  7 |  -0.035937 |   0.015625 |  -1.046641 
+  8 |  -0.039844 |   0.007812 |  -0.180802 
+  9 |  -0.041797 |   0.003906 |   0.252220 
+ 10 |  -0.040820 |   0.001953 |   0.035700 
+ 11 |  -0.040332 |   0.000977 |  -0.072553 
+ 12 |  -0.040576 |   0.000488 |  -0.018427 
+ 13 |  -0.040698 |   0.000244 |   0.008636 
+ 14 |  -0.040637 |   0.000122 |  -0.004896 
+ 15 |  -0.040668 |   0.000061 |   0.001870 
+ 16 |  -0.040652 |   0.000031 |  -0.001513 
+ 17 |  -0.040660 |   0.000015 |   0.000179 
+ 18 |  -0.040656 |   0.000008 |  -0.000667 
+ 19 |  -0.040658 |   0.000004 |  -0.000244 
+ 20 |  -0.040659 |   0.000002 |  -0.000033 
+
+Raiz aproximada pelo método da bissecção:  -0.040659
+Numero de iteracoes: 20
+
+
+
+*** Método da falsa posição ***
+
+  k  |  xm  |  abs(bk - ak)  |  f(xm)  
+  1 |   0.118363 |   1.000000 | -34.957141 
+  2 |  -0.038958 |   0.318363 |  -0.377177 
+  3 |  -0.040638 |   0.161042 |  -0.004797 
+  4 |  -0.040659 |   0.159362 |  -0.000061 
+  5 |  -0.040659 |   0.159341 |  -0.000001 
+
+Raiz aproximada pelo método da falsa posição:  -0.040659
+Numero de iteracoes: 5
+
+
+
+*** Método de Newton-Raphson ***
+
+  k  |  x_anterior  |  abs(x1 - x0)  |  f(x_anterior)  
+  1 |  -0.088063 |   0.047278 |  10.533364 
+  2 |  -0.040785 |   0.000126 |   0.027899 
+  3 |  -0.040659 |   0.000000 |   0.000000 
+
+Raiz aproximada pelo método de Newton-Raphson:  -0.040659
+Numero de iteracoes: 3
+
+
+
+*** Método de Secante ***
+
+  k  |  Xk  |  abs(Xk - Xk-1)  |  f(Xk)  
+  1 |   0.118363 |   0.681637 | -76.616000 
+  2 |  -0.453618 |   0.571981 | -34.957141 
+  3 |  -0.028531 |   0.425087 | 101.159842 
+  4 |  -0.039532 |   0.011001 |  -2.687494 
+  5 |  -0.040660 |   0.001127 |  -0.249833 
+
+Raiz aproximada pelo método de Secante:  -0.040659
+Numero de iteracoes: 5
+
+
+
+******** Teste do Sinal para verificar se tem raiz no intervalo ********
+
+ f(-1) * f(0) = -3897.000000 
+ Como f(-1) * f(0) <  0, existe pelo menos uma raiz no intervalo [-1, 0]
+
+******** Teste da Derivada primeira ********
+
+ f¹(-1) = -1105.000000 e f¹(0) = -221.000000 
+ -1105.000000 * -221.000000 = 244205.000000 
+ Como f¹(-1) * f¹(0) > 0 então existe apenas uma raiz no intervalo [-1, 0]
+
+******** Teste para verificar se realmente tem raiz no ponto encontrado ********
+
+ f(-0.040659) = -0.000033 
+ Como f(-0.040659) é aproximadamente zero, então -0.040659 é uma raiz da função
