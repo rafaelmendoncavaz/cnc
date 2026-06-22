@@ -18,8 +18,8 @@ exec(caminho + "03_aval-poly.sce", -1)
 exec(caminho + "04_plot-interp.sce", -1)
 
 // [1] Entrada de Dados
-X = [-1, 0, 2]
-Y = [4, 1, -1]
+X = [0, 2, 4, 6]
+Y = [1, 9, -65, 217]
 
 n = length(X)           // Número de pontos 
 
