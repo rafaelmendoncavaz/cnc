@@ -5,7 +5,7 @@
 clear()
 clc()
 
-caminho = get_absolute_file_path("problema-1.sce")
+caminho = get_absolute_file_path("problema-4.sce")
 exec(caminho + "plot_ajuste-poly-reg.sce", -1)
 
 printf("\n***** AJUSTE POLINOMIAL POR MINIMOS QUADRADOS *****\n")

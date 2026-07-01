@@ -10,7 +10,7 @@ printf("\n********** INTERPOLAÇÃO POR SISTEMA DE EQUAÇÕES - VERSÃO MODULARI
 // plotar_interpolador      // Geração do gráfico com pontos e polinômio
 
 // Diretório do script principal
-caminho = get_absolute_file_path("problema-1.sce")
+caminho = get_absolute_file_path("problema-2.sce")
 // Carregamento das funções modularizadas
 exec(caminho + "01_gauss.sce", -1)
 exec(caminho + "02_matriz-vandermonde.sce", -1)
