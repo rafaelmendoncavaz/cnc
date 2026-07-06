@@ -139,7 +139,7 @@ while (modo <> 0)
 		xtitle("Comparação de Métodos para o PVI em h = " + string(h(modo)) + ": dR(c)/dc = 1.5(200 - R(c))", "Valores do Domínio = [0, 1]", "Solução y(x)")
 		legend(["Euler 1ª Ordem", "Euler Modificado", "Tylor 2ª Ordem", ...
 			"Runge-Kutta 3ª Ordem", "Runge-Kutta 4ª Ordem", ...
-			"Solução Exata"], "in_upper_right")
+			"Solução Exata"], "in_lower_right")
 	else
 		disp("Opção Inválida! Selecione de 1 a 3!\n")
 	end

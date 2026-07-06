@@ -57,7 +57,7 @@ endfunction
 // https://www.derivative-calculator.net/
 // f'(x) + f'(y) * f
 function d2y = df(x, y)
-	d2y =  (4/5) - (1/10) * 0.8 * x - 0.1 * y
+	d2y =  (4/5) - (1/10) * (0.8 * x - 0.1 * y)
 endfunction
 
 // Solução Analítica

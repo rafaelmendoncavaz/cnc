@@ -26,7 +26,7 @@ exec(caminho + "06_plot-resultados.sce", -1)
 a = 0.0 // T(0)
 b = 5.0 // T(5)
 x0 = a
-y0 = 20 // R(0) = 20
+y0 = 20 // T(0) = 20
 // dy = (50 - y) / 10
 // d2y =  - (1 / 10) * (y0 - y) / 10
 // yex = 50 - 30 * exp(-x / 10)
@@ -57,7 +57,7 @@ endfunction
 // https://www.derivative-calculator.net/
 // f'(x) + f'(y) * f
 function d2y = df(x, y)
-	d2y =  - (1 / 10) * (y0 - y) / 10
+	d2y =  -(1 / 10) * ((50 - y) / 10)
 endfunction
 
 // Solução Analítica
@@ -137,7 +137,7 @@ while (modo <> 0)
 		xtitle("Comparação de Métodos para o PVI em h = " + string(h(modo)) + ": dT(t)/dt = (50 - T(t))/10", "Valores do Domínio = [0, 5]", "Solução y(x)")
 		legend(["Euler 1ª Ordem", "Euler Modificado", "Tylor 2ª Ordem", ...
 			"Runge-Kutta 3ª Ordem", "Runge-Kutta 4ª Ordem", ...
-			"Solução Exata"], "in_upper_right")
+			"Solução Exata"], "in_lower_right")
 	else
 		disp("Opção Inválida! Selecione de 1 a 3!\n")
 	end
